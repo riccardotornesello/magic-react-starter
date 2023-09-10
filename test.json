@@ -1,0 +1,34 @@
+{
+  "auth": {
+    "path": "/auth",
+    "title": "Auth",
+    "routes": {
+      "login": {
+        "path": "/login"
+      },
+      "logout": {
+        "path": "/logout"
+      }
+    }
+  },
+  "dashboard": {
+    "path": "",
+    "routes": {
+      "home": {
+        "path": "/",
+        "title": "Home",
+        "sitemap": true
+      }
+    }
+  },
+  "test": {
+    "path": "/resource-adm",
+    "sidebar": true,
+    "routes": {
+      "test1": {
+        "title": "test 1",
+        "path": "/"
+      }
+    }
+  }
+}

@@ -1,0 +1,288 @@
+.sidebar {
+  height: 100%;
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  transition: all var(--transition-theme);
+}
+.sidebarCollapse {
+  height: 100%;
+  width: var(--sidebar-width-collapsed);
+  background-color: var(--sidebar-bg);
+  transition: all var(--transition-theme);
+}
+.boxLogo {
+  height: var(--height-navbar);
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  overflow: hidden;
+  background-color: var(--navbar-bg);
+}
+
+.boxLogo img {
+  max-height: 48px;
+  transition: all 2s;
+}
+
+.boxNav {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--height-navbar));
+}
+
+.boxNav .navigator {
+  flex-grow: 2;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100px;
+  padding-top: 20px;
+}
+.boxNav .navigator nav {
+  padding-block: 24px;
+}
+.navigator ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.navigator ul .element {
+  cursor: pointer;
+}
+
+.navigator ul .element div.mainCategory {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 12px 12px;
+  margin-bottom: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.mainCategory,
+.mainCategoryOpenCollapsed {
+  cursor: pointer;
+}
+
+.navigator ul .element div.mainCategoryOpenCollapsed {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 12px 12px;
+  margin-bottom: 12px;
+}
+.mainCategory .innerCategory {
+  display: flex;
+  align-items: center;
+}
+.mainCategoryOpenCollapsed .innerCategory {
+  display: flex;
+  align-items: center;
+}
+
+.navigator ul li .icon svg {
+  height: 20px;
+  width: 20px;
+  margin-right: 14px;
+  color: var(--light-sidebar-text);
+}
+.navigator ul li svg.arrow {
+  color: var(--light-sidebar-text);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all var(--transition-theme);
+}
+.navigator ul li svg.arrowActive {
+  color: var(--light-sidebar-text);
+  font-size: 24px;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: all var(--transition-theme);
+}
+.navigator ul li svg path {
+  fill: var(--light-sidebar-text);
+  transition: all 0.5s;
+}
+
+.navigator ul .elementActive div.mainCategory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 12px;
+  margin-bottom: 12px;
+  color: var(--light-sidebar-text-selected);
+  transition: all var(--transition-theme);
+  background-color: white;
+}
+.navigator ul .elementSticky div.mainCategory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 12px;
+  margin-bottom: 12px;
+  background: var(--light-sidebar-bg);
+  color: var(--light-sidebar-text-selected);
+  transition: all var(--transition-theme);
+}
+
+.navigator ul .elementActive div.mainCategoryOpenCollapsed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 12px;
+  margin-bottom: 12px;
+  background: transparent;
+  color: var(--light-sidebar-text-selected);
+  box-shadow: inset 1px 2px 4px transparent;
+}
+
+.navigator ul .elementActive .categoryText,
+.navigator ul .elementActive .arrow,
+.navigator ul .element .mainCategory:hover .categoryText,
+.navigator ul .element .mainCategory:hover .arrow {
+  transition: all 0.5s;
+  color: var(--light-sidebar-text-selected);
+}
+
+.sidebarCollapse .mainCategory .arrow {
+  display: none;
+}
+
+.navigator ul .elementActive svg path,
+.navigator ul .element .mainCategory:hover svg path {
+  fill: var(--light-sidebar-text-selected);
+}
+.navigator ul .mainCategoryOpenCollapsed .categoryText,
+.navigator ul .mainCategoryOpenCollapsed .arrow {
+  transition: all 0.5s;
+  color: var(--light-sidebar-text);
+}
+.navigator ul .elementActive .mainCategoryOpenCollapsed svg path {
+  transition: all 0.5s;
+  fill: var(--light-sidebar-text);
+}
+
+.element .mainCategoryOpenCollapsed:hover span,
+.element .mainCategoryOpenCollapsed:hover svg,
+.elementActive .mainCategoryOpenCollapsed:hover span,
+.elementActive .mainCategoryOpenCollapsed:hover svg {
+  transition: all 0.5s;
+  color: var(--light-sidebar-text-selected);
+}
+.navigator ul .element .mainCategoryOpenCollapsed:hover svg path,
+.navigator ul .elementActive .mainCategoryOpenCollapsed:hover svg path {
+  fill: var(--light-sidebar-text-selected);
+}
+.navigator ul li .categoryText {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  transition: all 0.8s;
+  color: var(--light-sidebar-text);
+  opacity: 1;
+  line-clamp: 1;
+  word-break: break-all;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.sidebarCollapse .navigator ul li .categoryText {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: var(--light-sidebar-text);
+  transition: all 0.5s;
+  opacity: 0;
+  line-clamp: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.navigator div.subCategory {
+  margin-left: 22px;
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  color: var(--light-sidebar-text);
+}
+
+.navigator div.subCategory .innerSub {
+  margin-left: 13px;
+}
+.navigator div.subCategory .innerSub div.innerElement {
+  padding: 12px 12px 16px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  color: var(--light-sidebar-text);
+  transition: var(--transition-theme);
+}
+.navigator div.subCategory:hover div.innerElement {
+  color: var(--light-sidebar-text-selected);
+}
+.navigator div.subCategory .innerSub div.innerElementActive {
+  width: 100%;
+  padding: 12px 12px 16px;
+  color: var(--light-sidebar-text-selected);
+  transition: var(--transition-theme);
+}
+
+ul.closeDropdown {
+  opacity: 0;
+  transition: all var(--transition-theme);
+  overflow: hidden;
+}
+.closeDropdown.active {
+  opacity: 1;
+  transition: all var(--transition-theme);
+  overflow: hidden;
+}
+
+
+
+.sidebarCollapse .mainCategory {
+  padding-left: 35px !important;
+}
+
+/* Query */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 0;
+  }
+  .sidebarCollapse {
+    width: 0;
+  }
+  .sidebarMobile {
+    width: var(--sidebar-width);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    transition: all 0.5s;
+    background-color: var(--sidebar-bg);
+  }
+  .sidebarCollapseMobile {
+    width: var(--sidebar-width);
+    position: fixed;
+    top: 0;
+    left: -340px;
+    z-index: 99;
+    transition: all 0.5s;
+    background-color: var(--sidebar-bg);
+  }
+}

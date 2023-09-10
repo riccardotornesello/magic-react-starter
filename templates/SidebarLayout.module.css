@@ -1,0 +1,15 @@
+.layouting {
+  display: flex;
+  height: 100vh;
+}
+.mainContainer {
+  width: 100%;
+}
+.contentContainer {
+  max-width: 100%;
+  background-color: var(--main-bg);
+  height: calc(100% - var(--height-navbar));
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.7s;
+}

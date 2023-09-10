@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Transition */
+  --transition-theme: 0.5s;
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color) rgba(255, 255, 255, 0) !important;
+  /* Color */
+  --main-color: #2b323b;
+  --secondary-color: #029166;
+  --button-color: #39aca7;
+  --button-disabled-color: #39aca6ba;
+  --button-hover-color: #2e908b;
+  --gray-background: #efefef;
+  --dark-text: white;
+  --secondary-text-color: #6f767e;
+  --light-shadow: #0000001a;
+  /* Sidebar */
+  --sidebar-bg: #f1f1f1;
+  --light-sidebar-text: #6f767e;
+  --light-bg-sidebar-selected: #f8f8f8;
+  --light-sidebar-bg: #ffffff;
+  --light-bg-box: #f4f4f4;
+  /* NavBar  */
+  --navbar-bg: #2b323b;
+  --light-bg-navbar-selected: #ffffff;
+
+  /* Dimension */
+  --height-navbar: 80px;
+  --sidebar-width: 340px;
+  --sidebar-width-collapsed: 96px;
+  /* Main */
+  --main-bg: #f8f8f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color);
+}
+
+/* --------------- SCROLLBAR */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-clip: content-box;
+  background-color: rgba(0, 0, 0, 0);
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid transparent;
+  background-color: var(--main-color);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 991px) {
+  h2 {
+    font-size: 24px;
+  }
+}

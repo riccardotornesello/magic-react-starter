@@ -1,0 +1,25 @@
+.mainContainer {
+  width: 100%;
+  height: var(--height-navbar);
+  background-color: var(--navbar-bg);
+  transition: all var(--transition-theme);
+}
+.mainContainer .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.content .menuButton {
+  margin-right: 45px;
+}
+.content .menuButton svg {
+  font-size: 30px;
+  cursor: pointer;
+  transform: scaleY(-1);
+  color: var(--light-bg-navbar-selected);
+  transition: all var(--transition-theme);
+}
